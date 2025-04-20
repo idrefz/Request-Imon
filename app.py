@@ -23,7 +23,6 @@ with st.form("form_proyek"):
     no_kontrak = st.text_input("NO KONTRAK", "")
     
     additional_project = st.selectbox("ADDITIONAL PROJECT NAME", [
-        "BGES 2025 SERANG",
         "OLO(DWS) 2025",
         "OSP FEEDER, PT3",
         "NODE-B 2025",
