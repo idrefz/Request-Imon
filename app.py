@@ -10,10 +10,8 @@ st.title("Form Input Proyek Telkom")
 
 with st.form("form_proyek"):
        tahun = datetime.now().year  # Tahun otomatis    
-    unit_bisnis = st.selectbox("UNIT BISNIS", [
-        "SUBDIT CONSUMER FULFILLMENT", "DIVISI PLANNING & DEPLOYMENY", "TELKOM REGIONAL II"
+    unit_bisnis = st.selectbox("UNIT BISNIS", ["SUBDIT CONSUMER FULFILLMENT", "DIVISI PLANNING & DEPLOYMENY", "TELKOM REGIONAL II"
     ])
-    
     task = st.selectbox("TASK", ["HLD", "HLD Non-SW"])
     
     no_kontrak = st.text_input("NO KONTRAK", "")
