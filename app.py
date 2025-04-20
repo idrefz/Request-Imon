@@ -9,7 +9,7 @@ if "data" not in st.session_state:
 st.title("Form Input Proyek Telkom")
 
 with st.form("form_proyek"):
-    tahun = st.text_input("TAHUN", value="(thn sekarang)")
+    tahun = datetime.now().year  # Tahun otomatis
     
     unit_bisnis = st.selectbox("UNIT BISNIS", [
         "SUBDIT CONSUMER FULFILLMENT", "DIVISI PLANNING & DEPLOYMENY", "TELKOM REGIONAL II"
@@ -17,18 +17,30 @@ with st.form("form_proyek"):
     
     task = st.selectbox("TASK", ["HLD", "HLD Non-SW"])
     
-    no_kontrak = st.text_input("NO KONTRAK", "(isi manual)")
-    additional_project = st.text_input("ADDITIONAL PROJECT NAME")
-    vendor = st.text_input("VENDOR NAME")
-    sub_program = st.text_input("SUB PROGRAM")
-    id_referensi = st.text_input("ID REFERENSI", "(isi manual)")
+    no_kontrak = st.text_input("NO KONTRAK", "")
+    additional_project = st.selectbox("ADDITIONAL PROJECT NAME", [
+        "BGES 2024 SERANG",
+        "OLO(DWS) 2025",
+        "OSP FEEDER, PT3",
+        "NODE-B 2025",
+        "QE UTILITAS 2025",
+        "Microdemand 2025",
+        "ODP PT2 LOP GABUNGAN 2025",
+        "QE AKSES",
+        "PT2 TSEL",
+        "HARTA KARUN",
+        "NIQE"
+    ])
+    vendor = st.selectbox("VENDOR NAME", ["TELKOM AKSES"])    
+    sub_program = st.selectbox("SUB PROGRAM", [
+    "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3", "NIQE"
+    ])    id_referensi = st.text_input("ID REFERENSI", "(isi manual)")
     lop_telkom = st.text_input("LOP TELKOM", "(isi manual)")
     detail_lokasi = st.text_input("DETAIL LOKASI", "(isi manual)")
 
     region = st.selectbox("REGION", ["REGIONAL II"])
     witel = st.selectbox("WITEL", [
-        "SERANG", "TANGERANG", "BOGOR", "BEKASI", "BANDUNG", "CIREBON", "SUBANG", "DLL"
-    ])
+        "SERANG"])
     sto = st.selectbox("STO", [
         "BLJ", "CKA", "CSK", "KRS", "SAG", "TGR", "TJO", "BJO", "CLG", "CWN", "GRL",
         "MER", "PBN", "PSU", "SAM", "BAY", "LBU", "LWD", "MEN", "MLP", "PDG", "RKS",
