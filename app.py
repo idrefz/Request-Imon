@@ -94,5 +94,23 @@ if st.session_state.data:
     st.subheader("📋 Data Input:")
     st.dataframe(df, use_container_width=True)
 
-    csv = df.to_csv(index=False)
-    st.download_button("📥 Download CSV", data=csv, file_name="data_proyek.csv", mime="text/csv")
+    # Pilih kolom yang ingin di-download
+    st.markdown("### 🗂️ Pilih Kolom untuk Didownload:")
+    selected_columns = st.multiselect(
+        "Pilih kolom:",
+        options=df.columns.tolist(),
+        default=df.columns.tolist()  # Default semua tercentang
+    )
+
+    # Filter DataFrame sesuai kolom yang dipilih
+    filtered_df = df[selected_columns]
+
+    # Buat CSV dan tombol download
+    csv = filtered_df.to_csv(index=False)
+    st.download_button(
+        "📥 Download CSV (Kolom Terpilih)",
+        data=csv,
+        file_name="data_imon_request.csv",
+        mime="text/csv"
+    )
+
