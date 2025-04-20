@@ -9,8 +9,7 @@ if "data" not in st.session_state:
 st.title("Form Input Proyek Telkom")
 
 with st.form("form_proyek"):
-    tahun = datetime.now().year  # Tahun otomatis
-    
+       tahun = datetime.now().year  # Tahun otomatis    
     unit_bisnis = st.selectbox("UNIT BISNIS", [
         "SUBDIT CONSUMER FULFILLMENT", "DIVISI PLANNING & DEPLOYMENY", "TELKOM REGIONAL II"
     ])
@@ -32,15 +31,16 @@ with st.form("form_proyek"):
         "NIQE"
     ])
     vendor = st.selectbox("VENDOR NAME", ["TELKOM AKSES"])    
-    sub_program = st.selectbox("SUB PROGRAM", [
-    "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3", "NIQE"
-    ])    id_referensi = st.text_input("ID REFERENSI", "(isi manual)")
+    sub_program = st.selectbox("SUB PROGRAM", 
+    "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3", "NIQE"])    
+    id_referensi = st.text_input("ID REFERENSI", "(isi manual)")
     lop_telkom = st.text_input("LOP TELKOM", "(isi manual)")
     detail_lokasi = st.text_input("DETAIL LOKASI", "(isi manual)")
 
     region = st.selectbox("REGION", ["REGIONAL II"])
     witel = st.selectbox("WITEL", [
-        "SERANG"])
+        "SERANG", "TANGERANG", "BOGOR", "BEKASI", "BANDUNG", "CIREBON", "SUBANG", "DLL"
+    ])
     sto = st.selectbox("STO", [
         "BLJ", "CKA", "CSK", "KRS", "SAG", "TGR", "TJO", "BJO", "CLG", "CWN", "GRL",
         "MER", "PBN", "PSU", "SAM", "BAY", "LBU", "LWD", "MEN", "MLP", "PDG", "RKS",
