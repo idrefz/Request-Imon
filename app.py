@@ -24,6 +24,7 @@ with st.form("form_proyek"):
     
     additional_project = st.selectbox("ADDITIONAL PROJECT NAME", [
         "OLO(DWS) 2025",
+        "BGES 2025"
         "OSP FEEDER, PT3",
         "NODE-B 2025",
         "QE UTILITAS 2025",
