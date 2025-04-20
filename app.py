@@ -44,7 +44,7 @@ with st.form("form_proyek"):
 
     id_referensi = st.text_input("ID REFERENSI")
     lop_telkom = st.text_input("LOP TELKOM")
-    detail_lokasi = st.text_input("DETAIL LOKASI", "(isi manual)")
+    detail_lokasi = st.text_input("DETAIL LOKASI")
 
     region = st.selectbox("REGION", ["REGIONAL II"])
     
@@ -113,7 +113,7 @@ if st.session_state.data:
         st.download_button(
             "📥 Download CSV (Row Terpilih)",
             data=csv,
-            file_name="data_terpilih.csv",
+            file_name="data_Imon.csv",
             mime="text/csv"
         )
     else:
