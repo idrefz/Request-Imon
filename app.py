@@ -94,23 +94,29 @@ if st.session_state.data:
     st.subheader("📋 Data Input:")
     st.dataframe(df, use_container_width=True)
 
-    # Pilih kolom yang ingin di-download
-    st.markdown("### 🗂️ Pilih Kolom untuk Didownload:")
-    selected_columns = st.multiselect(
-        "Pilih kolom:",
-        options=df.columns.tolist(),
-        default=df.columns.tolist()  # Default semua tercentang
-    )
+    st.markdown("### ✅ Pilih Data yang Mau Didownload")
 
-    # Filter DataFrame sesuai kolom yang dipilih
-    filtered_df = df[selected_columns]
+    # Tambahkan checkbox per baris
+    selected_rows = []
+    for i, row in df.iterrows():
+        checkbox_label = f"{row['ADDITIONAL PROJECT NAME']} | {row['WITEL']} | {row['STO']}"
+        if st.checkbox(checkbox_label, key=f"row_{i}"):
+            selected_rows.append(i)
 
-    # Buat CSV dan tombol download
-    csv = filtered_df.to_csv(index=False)
-    st.download_button(
-        "📥 Download CSV (Kolom Terpilih)",
-        data=csv,
-        file_name="data_imon_request.csv",
-        mime="text/csv"
-    )
+    # Filter hanya data yang dipilih
+    if selected_rows:
+        filtered_df = df.loc[selected_rows]
+        st.dataframe(filtered_df, use_container_width=True)
+
+        # Download tombol
+        csv = filtered_df.to_csv(index=False)
+        st.download_button(
+            "📥 Download CSV (Row Terpilih)",
+            data=csv,
+            file_name="data_terpilih.csv",
+            mime="text/csv"
+        )
+    else:
+        st.info("Silakan pilih minimal satu baris untuk didownload.")
+
 
