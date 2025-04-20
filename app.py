@@ -42,8 +42,8 @@ with st.form("form_proyek"):
         "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3", "NIQE"
     ])
 
-    id_referensi = st.text_input("ID REFERENSI", "(isi manual)")
-    lop_telkom = st.text_input("LOP TELKOM", "(isi manual)")
+    id_referensi = st.text_input("ID REFERENSI")
+    lop_telkom = st.text_input("LOP TELKOM")
     detail_lokasi = st.text_input("DETAIL LOKASI", "(isi manual)")
 
     region = st.selectbox("REGION", ["REGIONAL II"])
