@@ -28,7 +28,7 @@ with st.expander("📘 Panduan Pengisian Form"):
     - **CAPEX**: Pilih sumber anggaran proyek.
 
     Setelah semua field diisi, klik tombol **Submit** untuk menyimpan data.
-    Kemudian, data akan muncul di bawah form dan bisa dipilih untuk di-*download* sebagai file CSV.
+    Kemudian, data akan muncul di bawah form dan bisa dipilih untuk di-*download* sebagai file CSV.ok
     """)
 with st.form("form_proyek"):
     tahun = datetime.now().year  # Tahun otomatis
