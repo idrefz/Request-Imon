@@ -13,13 +13,13 @@ with st.expander("📘 Panduan Pengisian Form"):
     Berikut adalah panduan untuk mengisi form proyek Imon-Serang:
 
     - **UNIT BISNIS**: Pilih unit kerja yang menangani proyek.
-    - **TASK**: Pilih jenis task, apakah *HLD* atau *HLD Non-SW*.
-    - **NO KONTRAK**: Masukkan nomor kontrak proyek, misalnya `123/ABC/2025`.
+    - **TASK**: Pilih jenis task, apakah *HLD*-req SW atau *HLD Non-SW*-Req Percepatan .
+    - **NO KONTRAK**: Masukkan nomor kontrak proyek, kosongin aja kalau ngak tau.
     - **ADDITIONAL PROJECT NAME**: Pilih nama proyek tambahan yang sesuai.
     - **VENDOR NAME**: Pilih nama vendor (saat ini hanya tersedia `TELKOM AKSES`).
     - **SUB PROGRAM**: Pilih sub-program proyek.
-    - **ID REFERENSI**: Masukkan ID referensi unik proyek jika ada.
-    - **LOP TELKOM**: Masukkan nama atau kode LOP Telkom.
+    - **ID REFERENSI**: Masukkan ID *MYPRO*.
+    - **LOP TELKOM**: Kosongin Aja Ya.
     - **DETAIL LOKASI**: Tulis detail lokasi proyek (misalnya: `Jl. Raya Serang KM 5`).
     - **REGION**: Pilih region (hanya tersedia `REGIONAL II`).
     - **WITEL**: Pilih Witel lokasi proyek berada.
