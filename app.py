@@ -8,7 +8,28 @@ if "data" not in st.session_state:
     st.session_state.data = []
 
 st.title("Form Input Proyek Imon-serang")
+with st.expander("📘 Panduan Pengisian Form"):
+    st.markdown("""
+    Berikut adalah panduan untuk mengisi form proyek Imon-Serang:
 
+    - **UNIT BISNIS**: Pilih unit kerja yang menangani proyek.
+    - **TASK**: Pilih jenis task, apakah *HLD* atau *HLD Non-SW*.
+    - **NO KONTRAK**: Masukkan nomor kontrak proyek, misalnya `123/ABC/2025`.
+    - **ADDITIONAL PROJECT NAME**: Pilih nama proyek tambahan yang sesuai.
+    - **VENDOR NAME**: Pilih nama vendor (saat ini hanya tersedia `TELKOM AKSES`).
+    - **SUB PROGRAM**: Pilih sub-program proyek.
+    - **ID REFERENSI**: Masukkan ID referensi unik proyek jika ada.
+    - **LOP TELKOM**: Masukkan nama atau kode LOP Telkom.
+    - **DETAIL LOKASI**: Tulis detail lokasi proyek (misalnya: `Jl. Raya Serang KM 5`).
+    - **REGION**: Pilih region (hanya tersedia `REGIONAL II`).
+    - **WITEL**: Pilih Witel lokasi proyek berada.
+    - **STO**: Pilih kode STO terdekat dari lokasi proyek.
+    - **POTENSI TEMATIK**: Pilih tema proyek jika ada, jika tidak pilih kosong.
+    - **CAPEX**: Pilih sumber anggaran proyek.
+
+    Setelah semua field diisi, klik tombol **Submit** untuk menyimpan data.
+    Kemudian, data akan muncul di bawah form dan bisa dipilih untuk di-*download* sebagai file CSV.
+    """)
 with st.form("form_proyek"):
     tahun = datetime.now().year  # Tahun otomatis
 
