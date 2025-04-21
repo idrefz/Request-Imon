@@ -7,7 +7,7 @@ from io import StringIO
 if "data" not in st.session_state:
     st.session_state.data = []
 
-st.title("Form Input Proyek Imon-s")
+st.title("Form Input Proyek Imon-serang")
 
 with st.form("form_proyek"):
     tahun = datetime.now().year  # Tahun otomatis
