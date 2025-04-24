@@ -54,13 +54,14 @@ with st.form("form_proyek"):
         "QE AKSES",
         "PT2 TSEL",
         "HARTA KARUN",
+        "BACKBONE",
         "NIQE"
     ])
 
     vendor = st.selectbox("VENDOR NAME", ["TELKOM AKSES"])    
 
     sub_program = st.selectbox("SUB PROGRAM", [
-        "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3", "NIQE"
+        "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3","Backbone","NIQE"
     ])
 
     id_referensi = st.text_input("ID REFERENSI")
