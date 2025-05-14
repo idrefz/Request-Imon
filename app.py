@@ -36,6 +36,7 @@ with st.form("form_proyek"):
     unit_bisnis = st.selectbox("UNIT BISNIS", [
         "SUBDIT CONSUMER FULFILLMENT", 
         "DIVISI PLANNING & DEPLOYMENY", 
+        "PT. Dayamitra Telekomunikasi (Mitratel)",
         "TELKOM REGIONAL II"
     ])
 
@@ -55,13 +56,14 @@ with st.form("form_proyek"):
         "PT2 TSEL",
         "HARTA KARUN",
         "BACKBONE",
+        "Node B OLO",
         "NIQE"
     ])
 
     vendor = st.selectbox("VENDOR NAME", ["TELKOM AKSES"])    
 
     sub_program = st.selectbox("SUB PROGRAM", [
-        "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3","Backbone","NIQE"
+        "HEM BGES", "LME OLO", "NODE B", "QE", "Microdemand", "PT2", "PT3","Backbone","NIQE","FO Mitratel Akuisisi"
     ])
 
     id_referensi = st.text_input("ID REFERENSI")
@@ -84,7 +86,7 @@ with st.form("form_proyek"):
         "FTTH PT 2", "FTTH PT 3", "Node B", "BACKBONE", "OLO", ""
     ])
 
-    capex = st.selectbox("CAPEX", ["Consumer", "Wibs", "Ebis", ""])
+    capex = st.selectbox("CAPEX", ["Consumer", "Wibs", "Ebis", "MITRATEL"])
 
     submit = st.form_submit_button("Submit")
 
